@@ -1,0 +1,124 @@
+*{
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: url('./bg.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  ;
+}
+.flex{
+  display: flex;
+  text-align: center;
+  /*border: 2px solid green;*/
+}
+#nav{
+  justify-content: space-around;
+  background: #60b0fb35;
+  padding: 10px 0;
+  box-shadow: 0 0.5px 10px 0 black;
+  
+}
+.menu{
+  padding: 4px 8px;
+  margin: 0 15px;
+  /*border: 2px solid red;*/
+  border-radius: 4px;
+  color: white;
+  text-shadow: 1px 2px 2px black;
+  text-decoration: none;
+  cursor: pointer;
+}
+#left{
+  /*margin: 0px 20px;*/
+  font-weight: normal;
+  font-family: Monospace;
+  font-size: 20px;
+  color: cyan;
+  text-shadow: 1px 1px 2px powderblue;
+}
+#search{
+  /*margin: 0px 20px;*/
+  padding: 0 10px;
+  border: none;
+  background: white;
+  border-radius: 50px;
+  color: black;
+  width: 150px;
+}
+#searchThree{
+  background: #ffffff3c;
+  background: white;
+  border: none;
+  border-radius: 5px;
+  padding: 3.5px 20px;
+  color: black;
+  box-shadow: 0 0 4px 2px powderblue;
+}
+#currentPage,
+.menu:active{
+  background: white;
+  color: black;
+  text-shadow: 1px 2px 2px lightgray;
+}
+.menu:hover{
+  text-decoration: underline white;
+  text-shadow: none;
+}
+#threelinesNav{
+  display: none;
+  background-color: #60b0fb35;
+  flex-direction: column;
+  transition: 1s;
+  width: 200px;
+  box-shadow: 1px 1px 5px 0 black;
+  border-radius: 0 0 10px 0;
+  position: relative;
+  /*animation: anm 1s;*/
+}
+@keyframes anm {
+  0%{
+    opacity: 0;
+    right: 100px;
+  }
+  100%{
+    opacity: 1;
+    right: 0px;
+  }
+}
+@keyframes anm2 {
+  0%{
+    opacity: 1;
+    right: 0px;
+  }
+  100%{
+    opacity: 0;
+    right: 100px;
+  }
+}
+#middle{
+  color: white;
+  transition: 1s;
+}
+#middleClicked,
+#searchClicked{
+  display: none;
+  color: cyan;
+  transition: 1s;
+}
+#right{
+  color: white;
+}
+#searchClicked{
+  display: none;
+}
+@media screen and (max-width: 480px){
+  #nav{
+    overflow: hidden;
+  }
+  #threelinesNav{
+  }
+  .menu{
+  }
+}

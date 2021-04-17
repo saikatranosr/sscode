@@ -1,0 +1,1 @@
+&copy; copyright SS Code Center 2021 all rights reserved.

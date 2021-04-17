@@ -1,0 +1,174 @@
+.letter{
+  font-family: Monospace;
+}
+.container {
+  display: flex;
+  /*border: 2px solid yellow;*/
+  /*align-items: center;*/
+  justify-content: center;
+  height: 150px;
+  /*text-align: center;*/
+  flex-wrap: wrap;
+  padding: 100px 30px;
+  margin: 0 25px 0 25px;
+  transition: 1s;
+}
+#animatedText-1{
+  position: relative;
+}
+#animatedText-2{
+  display: none;
+  position: relative;
+}
+.letter,
+.cursor{
+  color: white;
+  font-size: 3rem;
+  /*border: 2px solid cyan;*/
+  height: 40px;
+}
+.letter{
+  display: none;
+}
+@keyframes anm3{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+@keyframes anm4{
+  0%{
+    opacity: 1;
+    bottom: 0;
+  }
+  100%{
+    opacity: 0;
+    bottom: 100px;
+  }
+}
+@keyframes anm5{
+  0%{
+    opacity: 0;
+    top: 10px;
+  }
+  75%{
+    opacity: 1;
+    top: 0px;
+  }
+  100%{
+    opacity: 0.6;
+  }
+}
+@keyframes anm6{
+  0%{
+    opacity: 0;
+    top: 20px;
+  }
+  100%{
+    opacity: 1;
+    top: 0;
+  }
+}
+@keyframes anm7{
+  0%{
+    opacity: 0;
+    bottom: 30px;
+  }
+  100%{
+    opacity: 1;
+    bottom: 0;
+  }
+}
+.cursor{
+  animation: anm3 200ms 1000 alternate;
+}
+#upperTextArea{
+  height: auto;
+  padding: 10px;
+  margin: 20px 25px 0px 25px;
+  flex-direction: column;
+}
+.upperText{
+  /*border: 2px solid magenta;*/
+}
+#upperText-1{
+  display: none;
+ font-size: 18px;
+ font-family: Monospace;
+ color: white;
+ font-weight: bold;
+ opacity: 0.6;
+ position: relative;
+}
+#upperText-2{
+  display: none;
+  position: relative;
+  font-size: 25px;
+  color: white;
+  text-align: left;
+  /*font-weight: bold;*/
+  margin-top: 20px;
+  padding-left: 10px;
+  text-shadow: 1px 1px 2px gray;
+}
+#regForm{
+  height: auto;
+  flex-direction: column;
+  /*border: 2px solid blue;*/
+  padding: 10px;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  width: 400px;
+}
+.data{
+  display: none;
+  padding: 10px;
+  margin: 4px 0;
+  border: 1px solid cyan;
+  background: #ffffff67;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #225562;
+}
+.btn{
+  /*display: block;*/
+  background: #5f5f5fba;
+  color: white;
+}
+.btn:active{
+  background: cyan;
+  color: gray;
+}
+#captcha{
+  width: 50%;
+}
+#capValue{
+  display: none;
+  /*position: relative;*/
+  /*border: 2px solid red;*/
+  width: 100px;
+  margin-left: 40px;
+}
+#valid{
+  display: none;
+  font-size: 10px;
+  padding: 0 10px;
+  margin: 0 4px 4px 4px;
+  border: none;
+  background: none;
+  font-weight: normal;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 480px){
+  #regForm{
+    width: auto;
+  }
+}
